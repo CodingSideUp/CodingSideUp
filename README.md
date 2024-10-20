@@ -1,6 +1,6 @@
 Hi there! Taking a sneak peek at my profile, are we?
 Well you can get to know everything about me you are looking for about me right here.
-I am a current master's student studying my 2nd semester in Applied Data Science and Analytics at SRH HOCHSCHULE, HEIDELBERG.
+I am a current master's student studying my 3rd semester in Applied Data Science and Analytics at SRH HOCHSCHULE, HEIDELBERG.
 Speaking about my past academics, I hold a Diploma and Bachelor's degree in Elecetronics and Communication and Telecommunications Engineering respectively.
 I am a Data Science industry professional, with 4+ years of experience!
 At the start of my professional career, I have worked as a Demand Analyst at GENPACT INDIA PRIVATE LIMITED.
