@@ -1,39 +1,36 @@
 # Gurudarshan BN
 
-Data Science & ML Engineer based in Mannheim, Germany. M.Sc. Applied Data Science & Analytics from SRH Hochschule Heidelberg (2023–2025). Currently building demand forecasting and AI products at VASPP GmbH in Walldorf.
+Data Science & ML Engineer based in Mannheim, Germany. M.Sc. Applied Data Science & Analytics, SRH Hochschule Heidelberg (graduated Oct 2025).
 
-My background spans retail demand forecasting, supply chain analytics, and ML pipeline engineering — starting at Genpact on GE Healthcare equipment forecasting, through VMware's cloud revenue prediction work, a stint at Allianz Commercial on insurance data, and now building end-to-end ML systems for enterprise clients.
+I work across the full ML lifecycle — data engineering and wrangling, feature pipelines, model training and evaluation, and building dashboards that make results usable for non-technical stakeholders. My background covers demand forecasting, inventory analytics, materials informatics, and data platform engineering.
 
 ---
 
-## What I'm working on
+## Currently
 
-**[Demand Forecasting — Favorita](https://github.com/CodingSideUp/demand-forecasting)**
+**VASPP GmbH, Walldorf** — ML Engineer *(Jan 2026 – present)*
 
-Built a demand forecasting system on the Kaggle Favorita dataset — 125M transactions from Ecuadorian grocery stores (2013–2017). The interesting part wasn't the models themselves but the segmentation: I ran SBC classification on 1,920 store-item pairs and routed each to a specialist model based on its demand pattern (smooth, erratic, intermittent, lumpy). Intermittent series — the ones that sell on maybe 30% of days — get a two-stage model: a binary classifier to predict whether demand occurs at all, then a magnitude regressor for when it does.
+Building a production demand forecasting system on the Kaggle Favorita dataset — 125M+ real grocery transactions across 54 Ecuadorian stores (2013–2017). The work covers the full pipeline: exploratory data analysis on raw sales and promotional data, feature engineering (lag windows, rolling statistics, calendar signals, interaction terms), demand segmentation using the Syntetos-Boylan-Croston framework, training and hyperparameter optimisation of LightGBM and CatBoost models, quantile regression for uncertainty estimation, and a Streamlit frontend with SHAP explainability and an inventory control view.
 
-Final numbers on a 78,304-row held-out set: LightGBM Segmented at 23.52% WAPE, CatBoost M2 Full at 23.22% WAPE. Naive lag-7 baseline was 40.8%. The gap narrows on the intermittent segment specifically — the two-stage model gets 18.44% WAPE there vs ~27% from the smooth model used as a fallback on lumpy series.
+Also working on inventory optimisation — translating forecast uncertainty bands into safety stock and reorder policies, and collaborating cross-functionally with other teams to frame and validate those policies.
 
-The dashboard is a three-tab Streamlit app: model comparison with SHAP waterfall explainability, an inventory replenishment view with P10/P90 quantile bands, and a forward forecast through Christmas 2017 with four years of historical actuals overlaid.
+→ [github.com/CodingSideUp/demand-forecasting](https://github.com/CodingSideUp/demand-forecasting)
 
 ---
 
 ## Experience
 
-**VASPP GmbH, Walldorf** — ML Engineer / AI Products *(Oct 2025 – present)*
-Building enterprise ML demo systems for retail demand forecasting. Full pipeline from feature engineering and segmentation through LightGBM/CatBoost training to Streamlit dashboard.
-
 **Allianz Commercial, Frankfurt** — Business Analyst *(Jan 2025 – Jul 2025)*
-Data analysis and reporting on insurance portfolio data. Power BI dashboards, SQL-based data extraction, stakeholder reporting.
+Designed and developed complex ETL pipelines using Python and PySpark on Palantir Foundry. Performed data modelling and transformation on insurance portfolio data using Palantir Contour. Built DAX-based Power BI dashboards for business reporting.
 
 **SRH Hochschule Heidelberg** — M.Sc. Applied Data Science & Analytics *(Oct 2023 – Oct 2025)*
-Time-series forecasting, deep learning, statistical modelling. Thesis project on weather impact forecasting at Paretos GmbH.
+Coursework in data engineering, data management, cloud infrastructure, ML, deep learning, neural networks (LSTM, CNNs), reinforcement learning, and model deployment. Thesis: comparing XGBoost against Crystal Graph Convolutional Neural Networks for bandgap prediction in metal-organic frameworks.
 
 **VMware Software India, Bengaluru** — Senior Fulfillment Analyst *(Jun 2022 – Oct 2023)*
-Sales forecasting for the cloud product portfolio. Built and maintained ML models feeding revenue prediction pipelines.
+Sales forecasting for the cloud product portfolio. Built and maintained ML models for revenue prediction pipelines.
 
 **Genpact India (client: GE Healthcare)** — Demand Analyst *(Jul 2019 – Jun 2022)*
-Demand forecasting for medical equipment. Data cleaning, feature engineering, Excel/Python modelling, dashboard reporting in Tableau.
+Demand forecasting for medical equipment. Data wrangling, feature engineering, and Tableau reporting across the supply chain planning function.
 
 **Bangalore Institute of Technology** — B.E. Telecommunications Engineering *(2015–2019)*
 
@@ -41,25 +38,26 @@ Demand forecasting for medical equipment. Data cleaning, feature engineering, Ex
 
 ## Skills
 
-**Languages:** Python, SQL, R (basic)
+**Languages:** Python, SQL, R
 
-**ML / Modelling:** LightGBM, CatBoost, XGBoost, scikit-learn, PyTorch, statsmodels, SHAP, quantile regression, time-series forecasting
+**ML / Modelling:** LightGBM, CatBoost, XGBoost, scikit-learn, PyTorch, PyTorch Geometric, statsmodels, SHAP, LSTM, neural networks, reinforcement learning, quantile regression, time-series forecasting
 
 **Data Engineering:** pandas, NumPy, PySpark, DuckDB, DBT, parquet, MongoDB
 
-**BI & Visualisation:** Power BI, Tableau, Plotly, Streamlit
+**BI & Visualisation:** Power BI (DAX), Tableau, Plotly, Streamlit, matplotlib, seaborn
 
 **Cloud & Infrastructure:** GCP, AWS, Docker, Git, GitHub Actions
 
-**Other:** Palantir Contour, Anthropic Claude API
+**Platforms:** Palantir Foundry, Palantir Contour, Anthropic Claude API
 
 ---
 
-## Other projects
+## Projects
 
-**Weather Impact on Demand Forecasting** — Paretos GmbH (M.Sc. thesis project). Investigated how weather signals improve short-term retail demand forecasts. Built on real retail transaction data.
+**[Material Science — Bandgap Prediction](https://github.com/CodingSideUp/Material-Science)** *(M.Sc. thesis)*
+Compared XGBoost against Crystal Graph Convolutional Neural Networks (CGCNN) for predicting electronic bandgap in metal-organic frameworks. Dataset: QMOF database, 20,374 MOF crystal structures. Feature pipeline uses CIF-extracted geometry (lattice parameters, atomic coordinates) plus DFT-computed properties. CGCNN (PyTorch + PyTorch Geometric, CUDA-accelerated with automatic mixed precision) achieved R² ≈ 0.71 on a 4,075-sample held-out test set. SHAP analysis identifies which structural features drive predictions.
 
-**Hush Hush Recruiter** — Matching algorithm for an anonymous job-matching platform. Candidate-job ranking with skill-based similarity scoring.
+**[HushHush](https://github.com/CodingSideUp/HushHush)** — Talent recruitment platform built for a course project. Scrapes developer profiles from GitHub and Stack Overflow APIs, runs K-Means clustering on 8 repository and activity metrics to identify high-value candidates (silhouette-scored), then trains supervised classifiers (Random Forest, AdaBoost, XGBoost) on the cluster labels. Flask + MySQL backend with an HR dashboard for recruiter workflows and automated email outreach.
 
 ---
 
